@@ -1,0 +1,49 @@
+/* Remove margens e preenchimentos padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #121212;
+      color: white;
+      text-align: center;
+    }
+    header {
+      background-color: #1e1e1e;
+      padding: 40px 20px;
+    }
+    h1 strong {
+      color: #00bcd4;
+    }
+    p {
+      max-width: 600px;
+      margin: 10px auto 30px auto;
+      line-height: 1.5;
+    }
+    a{
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 20px;
+      background-color: #00bcd4;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    a:hover {
+      background-color: #0097a7;
+    }
+    img{
+      max-width: 200px;
+      border-radius: 100px;
+      margin-top: 20px;
+      border: 3px solid #00bcd4;
+    }
+    footer{
+      background-color: #1e1e1e;
+      padding: 15px;
+      font-size: 14px;
+    }
