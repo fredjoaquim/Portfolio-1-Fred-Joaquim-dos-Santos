@@ -1,0 +1,113 @@
+/* Remove margens e preenchimentos padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*cores mais suaves para evitar cansaço visual*/
+:root {
+    --cor-fundo: #181818; /* substituir o fundo preto forte por um cinza escuro suave */
+    --cor-header-footer: #212121; /* header e footer mais suaves */
+    --cor-principal: #29b6f6; /* azul mais claro que não cansa tanto os olhos */
+    --cor-principal-hover: #0288d1; /* azul hover mais suave */
+    --cor-texto: #e0e0e0; /* cinza claro ao invés de branco puro */
+}
+
+body {
+      font-family: Arial, sans-serif;
+      background-color: var(--cor-fundo);
+      color: var(--cor-texto);
+    }
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;                 /* ESSENCIAL */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* centraliza o conteúdo do projeto */
+  align-items: center;
+}
+
+header {
+      background-color: var(--cor-header-footer);
+      padding: 40px 20px;
+    }
+
+h1 strong {
+      color: var(--cor-principal);
+    }
+
+p {
+      max-width: 600px;
+      margin: 10px auto 30px auto;
+      line-height: 1.6;
+    }
+
+a{
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 20px;
+      background-color: var(--cor-principal);
+      color: var(--cor-texto);
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+a:hover {
+      background-color: var(--cor-principal-hover);
+    }
+
+img{
+      max-width: 200px;
+      border-radius: 100px;
+      margin-top: 20px;
+      border: 3px solid var(--cor-principal);
+    }
+
+.footer-minimal {
+  width: 100%;
+  padding: 20px 0;
+  background: transparent; /* sem cor por padrão */
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+
+  font-size: 16px;  /* ← pode ajustar */
+  color: var(--cor-texto);      /* ← pode ajustar a cor */
+}
+
+.footer-logo {
+  width: 200px;     /* ← pode ajustar o tamanho */
+  height: auto;
+  border-radius: 0;
+  border: none;
+}
+
+    @media (max-width: 768px) {
+      header {
+        padding: 20px 10px; /*reduz padding para celulares*/
+      }
+
+      p {
+        margin: 10px auto 20px auto; /*texto menor para celulares*/
+      }
+
+      img {
+        max-width: 80%; /*para que a imagem se adapte a telas menores*/
+      }
+
+      a {
+        padding: 8px 16px; /*botões menores para celulares*/
+        margin: 5px;
+      }
+    }
